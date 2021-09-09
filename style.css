@@ -120,6 +120,8 @@ img {
 .nav-logo {
   height:100%;
   width:30%;
+  min-width:100px;
+  max-width:200px;
   position:absolute;
   right:0;
   top:0;
@@ -234,7 +236,7 @@ img {
   1px 11px 0px black, 
   1px 12px 0px black, 
   1px 13px 0px black;
-  transform:translate(-1000px,0px);
+  transform:translate(0px,-1000px);
 }
 
 .link-blobs {

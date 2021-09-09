@@ -71,7 +71,7 @@ controller.addScene(firstScene)
 
 gsap.to(".letters",{
   duration:3,
-  x:0, 
+  y:0, 
   stagger:1, 
   ease:"bounce.out"
 })
