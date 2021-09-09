@@ -70,9 +70,9 @@ const firstScene = new ScrollMagic.Scene({
 controller.addScene(firstScene)
 
 gsap.to(".letters",{
-  duration:3,
+  duration:2,
   y:0, 
-  stagger:1, 
+  stagger:0.8, 
   ease:"bounce.out"
 })
 
@@ -83,3 +83,8 @@ gsap.to(".pencil",{
   ease:"elastic.out" 
 })
 
+setInterval(() => {
+  console.log(window.innerHeight)
+},2000)
+
+console.log(window.innerHeight)

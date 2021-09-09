@@ -120,8 +120,6 @@ img {
 .nav-logo {
   height:100%;
   width:30%;
-  min-width:100px;
-  max-width:200px;
   position:absolute;
   right:0;
   top:0;
@@ -139,7 +137,7 @@ img {
   var(--navyBlue) 100%,
   var(--blueGrotto) 40%);
   border-radius:5px;
-  font-size:1rem;
+  font-size:0.8rem;
   font-weight:900;
   text-shadow:2px 2px 0px #2F2F2F;
   transform:translate(0px,30px);
@@ -274,9 +272,9 @@ img {
   left:-21%;
 }
 
-@media screen and (max-width:980px){
+@media screen and (max-width:1200px){
   body {
-    background:white;
+    background:var(--babyBlue);
   }
   
  .hamburger-container {
@@ -303,7 +301,7 @@ img {
     margin-bottom:0;
     margin:0;
     position:fixed;
-    top:-3%;
+    top:-4%;
  }
  
  .header-container {
@@ -374,6 +372,18 @@ img {
  }
 
 } 
+
+@media screen and (max-height:800px){
+ .links-container{
+   top:-8%;
+ }
+}
+
+@media screen and (max-height:600px){
+ .links-container {
+   top:-15%;
+ }
+}
 
 /*  End of The Head Design  */
 
