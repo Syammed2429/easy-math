@@ -9,19 +9,13 @@ let getArea = (e) => {
     e.preventDefault();
     areaResult.innerHTML = '';
     let width = document.getElementById('width').value;
-    let length = document.getElementById('length').value;   
+    let length = document.getElementById('length').value;
     let ans = document.createElement('div');
     let how = document.createElement('div');
-    ans.innerHTML = `<strong>Results : </strong> ${length * width} cm<sup>2</sup>`; 
+    ans.innerHTML = `<strong>Results : </strong> ${length * width} cm<sup>2</sup>`;
     how.innerHTML = `<strong>How : </strong>The area of a rectangle is calculated in units by multiplying the width by the height of the rectangle. The formula for rectangle of area is : <code>length * breadth </code>`;
-    how.style.textAlign ='left'
-    console.log(length * width );
-    areaResult.append(ans,how)
-
-
-
-
-
+    how.style.textAlign = 'left'
+    areaResult.append(ans, how);
 }
 
 
@@ -35,14 +29,8 @@ let getWidth = (e) => {
     let ans = document.createElement('div');
     let how = document.createElement('div');
 
-    ans.innerHTML = `<strong>Results :</strong> ${area/length1} cm`
+    ans.innerHTML = `<strong>Results :</strong> ${area / length1} cm`
     how.innerHTML = `<strong>How : </strong>The width of a rectangle is calculated in units by dividing the area by the height of the rectangle. The formula for rectangle of width is : <code>area / breadth </code>`;
     how.style.textAlign = 'left'
-    widthResult.append(ans,how)
-
-
-
-    console.log(area/length1);
-
-
+    widthResult.append(ans, how);
 }
