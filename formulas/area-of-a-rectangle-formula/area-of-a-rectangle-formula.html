@@ -12,21 +12,32 @@
     <div class="container-fluid text-center mt-5 mb-5">
         <h1>Area of a rectangle</h1>
     </div>
-        <form onsubmit="formSubmit(event)">
+        <form onsubmit="getArea(event)">
             <div class="container">
-                <div class="">
+                <h5>Do you know the values of length and width of a rectangle? You want to find the area of a rectangle then use the below function</h5>
                 <label for="width" class="form-label">Enter the width of the rectangle :</label>
-                    <input type="number" class="form-control border-1 rounded-5" id="width" placeholder="Enter the width of the rectangle :" autofocus required>
-                    <label for="length" class="form-label mt-2">Enter the length of the rectangle:</label>
-                    <input type="number" class="form-control border-1 rounded-5" id="length" placeholder="Enter the length of the rectangle :" required>
-                    <button class="btn btn-success mt-3 rounded-3">Get Results</button>
-                </div>
-                <div class="results text-center mt-3 "></div>
+                <input type="number" class="form-control border-1 rounded-5" id="width" placeholder="Enter the width of the rectangle " autofocus required>
+                <label for="length" class="form-label mt-2">Enter the breadth of the rectangle:</label>
+                <input type="number" class="form-control border-1 rounded-5" id="length" placeholder="Enter the breadth of the rectangle " required>
+                <button class="btn btn-success mt-3 rounded-3">Get Results</button>
+                <div class="area-res text-center mt-3 "></div>
                 <!-- <div class="how text-right mt-2"></div> -->
             </div>
         </form>
-
-
-        <script type="text/javascript" src="area-of-a-rectangle-formula.js"></script>
+        <hr class="container my-5">
+        <form onsubmit="getWidth(event)">
+            <h5>Do you know the value of area and length of a rectangle? & You want to find the width of the rectangle then use the below function</h5>
+            <div class="container">
+                <label for="area" class="form-label">Enter the area of a rectangle :</label>
+                <input type="number" class="form-control border-1 rounded-5" id="area" placeholder="Enter the area of the rectangle "  required>
+                <label for="length1" class="form-label mt-2">Enter the breadth of the rectangle:</label>
+                <input type="number" class="form-control border-1 rounded-5" id="length1" placeholder="Enter the breadth of the rectangle " required>
+                <button class="btn btn-success mt-3 rounded-3">Get Results</button>
+                <div class="width-res text-center mt-3 mb-5 "></div>
+                <!-- <div class="how text-right mt-2"></div> -->
+            </div>
+        </form>
+    
+    <script type="text/javascript" src="area-of-a-rectangle-formula.js"></script>
 </body>
 </html>
