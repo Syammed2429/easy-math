@@ -4,7 +4,7 @@ let areaResult = document.querySelector('.area-res')
 let widthResult = document.querySelector('.width-res')
 
 
-//Function to the the area result 
+//Function to find the area of a rectangle 
 let getArea = (e) => {
     e.preventDefault();
     areaResult.innerHTML = '';
@@ -19,7 +19,7 @@ let getArea = (e) => {
 }
 
 
-//Function to the the width result 
+//Function to the width of a rectangle 
 
 let getWidth = (e) => {
     e.preventDefault();
