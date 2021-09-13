@@ -1,4 +1,4 @@
-const hamburgerContainer = document.querySelector(".hamburger-container");
+/*const hamburgerContainer = document.querySelector(".hamburger-container");
 const linksContainer = document.querySelector(".links-container");
 let state = false;
 const controller = new ScrollMagic.Controller();
@@ -87,4 +87,4 @@ setInterval(() => {
   console.log(window.innerHeight)
 },2000)
 
-console.log(window.innerHeight)
+console.log(window.innerHeight)*/
