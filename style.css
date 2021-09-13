@@ -163,7 +163,7 @@ img {
   -2px -2px 0px var(--dark);
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1920px){
  .navigation {
    height:80px;
    width:200%;
