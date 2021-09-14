@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
 
@@ -9,6 +9,8 @@
   --nav-bar:#F69F91;
   --dark:rgba(0,0,0,0.8);
   --mirror:rgba(255,255,255,.2);
+  
+  
 }
 
 html {
@@ -68,6 +70,7 @@ html {
   color:var(--white-bg);
   text-shadow:1px 1px 0px black;
   font-size:0.9rem;
+  transition:all 0.3s ease;
 }
 
 .title-container {
@@ -100,6 +103,7 @@ html {
   left:0;
   bottom:0;
   filter:drop-shadow(2px 2px 0px black);
+  z-index:3;
 }
 
 .header-title {
@@ -114,7 +118,7 @@ html {
   font-size:1rem;
   text-transform:uppercase;
   color:white;
-  background:var(--orange-bg);
+  background:var(--text);
   padding:5px;
   border-radius:5px;
 }
@@ -130,6 +134,34 @@ img {
   width:200px;
 }
 
+.wave-header-container {
+  height:auto;
+  width:100%;
+  background:transparent;
+  position:absolute;
+  bottom:0;
+  z-index:2;
+  overflow:hidden;
+}
+
+.wave-header-container img {
+  height:100%;
+  width:100%;
+  animation:wave 8s ease-in-out infinite alternate;
+}
+
+@keyframes wave {
+  0% {
+    height:100%;
+    width:100%;
+  }
+  
+  100% {
+    height:200%;
+    width:200%;
+  }
+}
+
 /*SECOND HEADER SECTION*/
 
 .second-section {
@@ -142,9 +174,11 @@ img {
   overflow:hidden;
 }
 
+
 .calculator {
-  height:90%;
-  width:80%;
+  height:200px;
+  width:200px;
+  z-index:2;
 }
 
 .span-math-container {
@@ -153,6 +187,7 @@ img {
   display:flex;
   align-items:center;
   justify-content:space-around;
+  z-index:2;
 }
 
 .span-math-container span {
@@ -163,18 +198,34 @@ img {
   -2px -2px 0px var(--dark);
 }
 
+.navigation a:hover {
+  color:var(--text);
+  transform:scale(1.4);
+}
+
+.navigation .learn:hover {
+  color:var(--white-bg);
+}
+
+.blob-header {
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index:1;
+}
+
 @media screen and (max-width:1920px){
  .navigation {
    height:80px;
    width:200%;
    background:var(--text);
-   z-index:50;
+   z-index:500;
    display:flex;
    align-items:center;
    justify-content:flex-start;
    flex-direction:row;
-   overflow:hidden;
    background:var(--orange-bg);
+   overflow:hidden;
  }
  
  .navigation a {
@@ -198,7 +249,7 @@ img {
    top:5%;
  }
  
- .learn {
+  .learn {
    background:var(--text);
    padding:5px;
    border-radius:5px;
@@ -206,7 +257,7 @@ img {
  
  .span-math-container {
    position:absolute;
-   bottom:-15%;
+   bottom:-12%;
  }
  
  .dice1 {
@@ -231,7 +282,8 @@ img {
  
  .navigation a {
    margin:0 0 0 0;
-   color:var(--text);
+   color:var(--white-bg);
+   
  }
  
  .home, 
@@ -267,4 +319,10 @@ img {
   top:0;
   right:0;
  }
+ 
+  .span-math-container {
+   position:relative;
+   bottom:0;
+ }
+ 
 }
