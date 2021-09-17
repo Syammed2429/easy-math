@@ -1,90 +1,126 @@
-/*const hamburgerContainer = document.querySelector(".hamburger-container");
-const linksContainer = document.querySelector(".links-container");
-let state = false;
 const controller = new ScrollMagic.Controller();
 
-function showMenu(){
-  if(!state){
-    hamburgerContainer.classList.add("open");
-    state = true
-    gsap.to(".links-container",{
-    height:"60%", 
-    width:"100%",
-    scale:2,
-    ease:"elastic.out",
-    duration:0.7
-    })
-  }
-  else {
-    hamburgerContainer.classList.remove("open")
-    state = false
-    gsap.to(".links-container",{
-     height:"0%", 
-     width:"0%",
-     scale:1,
-      ease:"elastic.out", 
-      duration:0.7
-    })
-  }
-}
-
-hamburgerContainer.addEventListener("click",showMenu); 
-
-const firstTween = new TimelineMax()
-
-.fromTo(".navigation",2,{
-  opacity:1
+gsap.fromTo(".letter-title",{
+  y:"-2000%"
 },{
-  opacity:0, 
+  y:"0%",
+  duration:3,
+  stagger:1,
+  ease : "bounce.out"
+})
+
+
+const firstSection = new TimelineMax()
+.fromTo(".section1",3,{
+  x:"-100%", 
+  opacity:0
+},{
+  x:"0%",
+  ease : "Linear.easeOut", 
+  opacity:1
+})
+
+.fromTo(".books-body",2,{
+  y:"100%", 
+  scale:0.5
+},{
+  y:"-30%",
+  scale:1
+}) 
+.to(".navigation",2,{
+  opacity:0,
   pointerEvents:"none"
 })
 
-.fromTo(".introduction",2,{
-  y:"-100%"
-},{
-  y:"0%", 
-  ease: "power1.out"
+const firstSectionTween = new ScrollMagic.Scene({
+  triggerHook:0.7, 
+  triggerElement:".body-section", 
+  duration:500
 })
-
-.fromTo(".about-platform",2,{
-  x:"-100%"
+.setTween(firstSection)
+.addTo(controller)
+/*  SQUARE FORMULA ANIMATION */
+const formulas = new TimelineMax()
+.fromTo(".rectangle-info",2,{
+  opacity:0,
+  scale:0
 },{
+  opacity:1,
+  scale:1, 
+  ease:"Linear.easeOut"
+})
+.fromTo(".rectangle-img",2,{
+  opacity:0,
+  x:"100%",
+  rotate:"180deg"
+},{
+  opacity:1,
+  rotate:"20deg",
   x:"0%", 
-  ease: "power1.out"
+  ease:"Linear.easeOut"
 })
 
-.staggerFromTo(".number",1,{
-  y:"-200%", 
+const oddPrimeFormula = new TimelineMax()
+.fromTo(".even-odd-info",2,{
+  opacity:0,
+  scale:0
 },{
-  y:"0%", 
-  ease: "power1.out"
-},1)
-
-const firstScene = new ScrollMagic.Scene({
-  triggerElement:".first-section-container", 
-  triggerHook:0,
-  duration:4000
+  opacity:1,
+  scale:1, 
+  ease:"Linear.easeOut"
 })
-.setPin(".first-section-container")
-.setTween(firstTween)
-controller.addScene(firstScene)
-
-gsap.to(".letters",{
-  duration:2,
-  y:0, 
-  stagger:0.8, 
-  ease:"bounce.out"
+.fromTo(".even-odd-img",2,{
+  opacity:0,
+  x:"100%",
+  rotate:"180deg"
+},{
+  opacity:1,
+  rotate:"0deg",
+  x:"0%", 
+  ease:"Linear.easeOut"
 })
 
-gsap.to(".pencil",{
-  x:0,
-  duration:3,
-  delay:1,
-  ease:"elastic.out" 
+const primeFormula = new TimelineMax()
+.fromTo(".prime-info",2,{
+  opacity:0,
+  scale:0
+},{
+  opacity:1,
+  scale:1, 
+  ease:"Linear.easeOut"
+})
+.fromTo(".prime-img",2,{
+  opacity:0,
+  x:"100%",
+  rotate:"180deg"
+},{
+  opacity:1,
+  rotate:"0deg",
+  x:"0%", 
+  ease:"Linear.easeOut"
 })
 
-setInterval(() => {
-  console.log(window.innerHeight)
-},2000)
 
-console.log(window.innerHeight)*/
+const scenesquareFormula = new ScrollMagic.Scene({
+  triggerHook:0.5,
+  triggerElement:".main-section", 
+  duration:300
+})
+.setTween(formulas)
+.addTo(controller) 
+
+const sceneEvenOddFormula = new ScrollMagic.Scene({
+  triggerHook:0.5,
+  triggerElement:".even-odd-section", 
+  duration:300
+})
+.setTween(oddPrimeFormula)
+.addTo(controller)
+
+const scenePrimeFormula = new ScrollMagic.Scene({
+  triggerHook:0.5, 
+  triggerElement:".prime-section",
+  duration:300
+})
+.setTween(primeFormula)
+.addTo(controller)
