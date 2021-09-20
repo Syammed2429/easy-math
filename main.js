@@ -328,8 +328,8 @@ scrollTopBtn.addEventListener("click",() => {
 })
 
 
-fetch(`http://numbersapi.com/random/trivia?json`)
-.then(res => res.json())
-.then(data => {
-  facts.textContent = data.text
+fetch("http://numbersapi.com/random/trivia")
+.then(res => res.text()) 
+.then(text => {
+   facts.textContent = text
  })
