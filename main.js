@@ -178,7 +178,7 @@ const prime = new TimelineMax()
 
 const primeTween = new ScrollMagic.Scene({
   triggerElement:".prime-body-section", 
-  triggerHook:0.5,
+  triggerHook:0.9,
   duration:600
 })
 .setTween(prime)
@@ -219,7 +219,7 @@ const primeImg = new TimelineMax()
 
 const primeImgScene = new ScrollMagic.Scene({
   triggerElement:".img-prime-container",
-  triggerHook:0.5, 
+  triggerHook:0.9, 
   duration:600
 })
 .setTween(primeImg)
@@ -259,7 +259,7 @@ const rectangle = new TimelineMax()
 }) 
 
 const rectangleScene = new ScrollMagic.Scene({
-  triggerHook:0.5,
+  triggerHook:0.9,
   triggerElement:".rectangle-section", 
   duration:600
 })
@@ -301,7 +301,7 @@ const rectangleImg = new TimelineMax()
 
 const rectangleImgTween = new ScrollMagic.Scene({
   triggerElement:".img-rectangle-container", 
-  triggerHook:0.5, 
+  triggerHook:1, 
   duration:500
 })
 .setTween(rectangleImg)
