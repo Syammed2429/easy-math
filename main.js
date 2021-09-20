@@ -127,7 +127,7 @@ const evenOddImg = new TimelineMax()
 })
 
 const evenOddTween = new ScrollMagic.Scene({
-  triggerHook:1,
+  triggerHook:0.5,
   triggerElement:".even-odd-body-section", 
   duration:600
 })
@@ -178,7 +178,7 @@ const prime = new TimelineMax()
 
 const primeTween = new ScrollMagic.Scene({
   triggerElement:".prime-body-section", 
-  triggerHook:1,
+  triggerHook:0.5,
   duration:600
 })
 .setTween(prime)
@@ -219,7 +219,7 @@ const primeImg = new TimelineMax()
 
 const primeImgScene = new ScrollMagic.Scene({
   triggerElement:".img-prime-container",
-  triggerHook:1, 
+  triggerHook:0.5, 
   duration:600
 })
 .setTween(primeImg)
@@ -259,7 +259,7 @@ const rectangle = new TimelineMax()
 }) 
 
 const rectangleScene = new ScrollMagic.Scene({
-  triggerHook:0.9,
+  triggerHook:0.5,
   triggerElement:".rectangle-section", 
   duration:600
 })
@@ -301,7 +301,7 @@ const rectangleImg = new TimelineMax()
 
 const rectangleImgTween = new ScrollMagic.Scene({
   triggerElement:".img-rectangle-container", 
-  triggerHook:1, 
+  triggerHook:0.5, 
   duration:500
 })
 .setTween(rectangleImg)
@@ -327,8 +327,9 @@ scrollTopBtn.addEventListener("click",() => {
   })
 })
 
-window.addEventListener("DOMContentLoaded",() => {
-  fetch(`http://numbersapi.com/random/trivia?json`)
+
+fetch(`http://numbersapi.com/random/trivia?json`)
 .then(res => res.json())
-.then(data => facts.textContent = data.text)
-})
+.then(data => {
+  facts.textContent = data.text
+ })
