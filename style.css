@@ -781,3 +781,26 @@ body {
 .back-top:hover {
   opacity:1;
 }
+
+.footer {
+  width:100%;
+  height:80px;
+  background:url("icons/Shiny.svg");
+  background-size:100% 100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+
+.footer p {
+  font-size:0.8rem;
+   text-align:center;
+   color:white;
+   font-weight:900;
+   padding:10px;
+   text-shadow:1px 1px 0px black;
+}
